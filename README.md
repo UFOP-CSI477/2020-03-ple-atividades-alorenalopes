@@ -11,3 +11,5 @@
 ## [Projeto final:](./Projeto/README.md) 
 
 O projeto final consiste em uma plataforma onde o usuário poderá manter histórico de seus exames para consultas. Estamos vivendo em um mundo tecnológico, sendo muito mais fácil procurar dados nos dispositivos eletrônicos do que em pasta com milhares de papéis.
+
+A plataforma permitirá que o usuário entre com fotos dos exames e também disponibilizará que ele entre com os dados manualmente.
