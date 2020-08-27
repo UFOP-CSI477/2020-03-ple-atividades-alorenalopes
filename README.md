@@ -2,13 +2,12 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Lorena Silveira Lopes
+- Matrícula: 15.15.8295
+- Curso: Engenharia da Computação
+- Semestre/Ano correntes: 2020/3 - PLE Emergencial COVID-19
+- Link para o seu GitHub: https://github.com/alorenalopes
 
 ## [Projeto final:](./Projeto/README.md) 
 
-Apresente uma breve descrição do seu projeto.
-
+O projeto final consiste em uma plataforma onde o usuário poderá manter histórico de seus exames para consultas. Estamos vivendo em um mundo tecnológico, sendo muito mais fácil procurar dados nos dispositivos eletrônicos do que em pasta com milhares de papéis.
