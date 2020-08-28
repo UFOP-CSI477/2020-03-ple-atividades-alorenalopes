@@ -1,0 +1,35 @@
+#page-relatorio h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-top: 60px;
+}
+
+table {
+    margin-left:160px;
+    width: 80%;
+    border-collapse: collapse;
+    border: 3px solid #463f3a;
+    text-align: center;
+    table-layout: auto;
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+  }
+  td{
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a; 
+
+  }
+  
+  
+  th {
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    color: #ff686b
+  }
