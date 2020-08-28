@@ -1,9 +1,9 @@
-ul{
+ul {
   list-style-type: none;
   display: flex;
 }
 
-li{
+li {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -13,8 +13,8 @@ li{
   margin-right: 30px;
 }
 
-header{
-  background-color:#463f3a;
+header {
+  background-color: #463f3a;
   width: 100%;
   height: 50px;
   margin: 0;
@@ -43,4 +43,3 @@ a {
   font-size: 18px;
   text-align: center;
 }
-

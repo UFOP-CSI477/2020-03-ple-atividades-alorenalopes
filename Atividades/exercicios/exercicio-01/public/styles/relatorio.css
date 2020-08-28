@@ -6,8 +6,8 @@
     margin-top: 60px;
 }
 
-table {
-    margin-left:160px;
+#page-relatorio table {
+    margin-left: 160px;
     width: 80%;
     border-collapse: collapse;
     border: 3px solid #463f3a;
@@ -15,21 +15,20 @@ table {
     table-layout: auto;
     margin-top: 40px;
     font-family: 'Roboto', sans-serif;
-  }
-  td{
+}
+
+#page-relatorio td {
     border: 1px solid #463f3a;
     overflow: hidden;
-    text-overflow: ellipsis;  
+    text-overflow: ellipsis;
     font-family: 'Roboto', sans-serif;
-    color: #463f3a; 
+    color: #463f3a;
+}
 
-  }
-  
-  
-  th {
+#page-relatorio th {
     border: 1px solid #463f3a;
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: 'Roboto', sans-serif;
     color: #ff686b
-  }
+}

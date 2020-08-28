@@ -13,18 +13,18 @@
 }
 
 #vertical-tela {
-    margin-top:15px;
+    margin-top: 15px;
     margin-left: 20px;
     flex-direction: column;
     display: flex;
 }
 
-#vertical-tela h2{
+#vertical-tela h2 {
     font-family: 'Roboto', sans-serif;
     color: #463f3a
 }
 
-#vertical-tela p{
+#vertical-tela p {
     font-family: 'Roboto', sans-serif;
     color: #ff686b
 }
