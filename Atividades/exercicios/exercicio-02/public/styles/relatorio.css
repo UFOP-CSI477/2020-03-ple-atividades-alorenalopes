@@ -1,0 +1,39 @@
+#page_relatorio h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-top: 60px;
+}
+
+#page_relatorio table {
+    margin-left: 35px;
+    width: 95%;    
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bcb8b1;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#page_relatorio td {
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a;
+}
+
+#page_relatorio th {
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    color: #ff686b
+}
+
+body{
+    background-image: url("/public/images/background_cadastro.jpg");
+    background-repeat: inherit;
+}

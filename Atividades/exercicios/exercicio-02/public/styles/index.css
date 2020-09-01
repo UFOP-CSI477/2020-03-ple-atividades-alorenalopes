@@ -56,4 +56,10 @@ a {
   font-family: 'Roboto', sans-serif;
   color: #463f3a;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#page_home img {
+  margin-left: 380px;
 }

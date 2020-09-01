@@ -1,0 +1,38 @@
+#page_perfil div img {
+    width: 25%;
+    height: 160%;
+    border-radius: 8px 8px 8px 8px;
+    object-fit: cover;
+    margin-left: 400px;
+}
+
+#divisao_tela {
+    margin-top: 50px;
+    display: flex;
+    flex: 1;
+}
+
+#vertical_tela {
+    margin-top: 15px;
+    margin-left: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+#vertical_tela h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a
+}
+
+#vertical_tela p {
+    font-family: 'Roboto', sans-serif;
+    color: #ff686b
+}
+
+#page_perfil h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-top: 60px;
+}

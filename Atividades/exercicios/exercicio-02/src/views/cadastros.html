@@ -5,83 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+    <link rel="stylesheet" href="/public/styles/index.css">
+    <link rel="stylesheet" href="/public/styles/cadastros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
-    <a href="/src/views/index.html">Home</a></li>
-    <a href="#">Lançamentos</a></li>
-    <a href="/src/views/relatorio.html">Relatórios</a></li>
-    <a href="/src/views/perfil.html">Perfil</a></li>
-    <a href="#">Sair</a></li>
+    <div id="page_cadastro">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/src/views/index.html">Home</a></li>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="/src/views/relatorio.html">Relatórios</a></li>
+                    <li><a href="/src/views/perfil.html">Perfil</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <h1>Cadastro</h1>
-    <form>
-        <legend>
-            <h2>Dados Pessoais</h2>
-        </legend>
+        <form>            
+            <legend>
+                <h2>Dados Pessoais</h2>
+            </legend>
 
-        <div>
-            <div>
-                <label for="nome">Nome</label>
-                <input required type="text" name="nome">
+            <div class="dados">
+                <div class="dado">
+                    <label for="nome">Nome</label>
+                    <input required type="text" name="nome">
+                </div>
+                <div class="dado">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input required type="text" name="sobrenome">
+                </div>
+                <div class="dado">
+                    <label for="cpf">CPF</label>
+                    <input required type="text" name="cpf">
+                </div>
+                <div class="dado">
+                    <label for="sexo">Sexo</label>
+                    <input required type="url" name="img">
+                </div>
+                <div class="dado">
+                    <label for="data">Data de Nascimento</label>
+                    <input required type="date" name="data">
+                </div>
+                <div class="dado">
+                    <label for="email">E-mail</label>
+                    <input required type="email" name="email">
+                </div>
+                <div class="dado">
+                    <label for="usuario">Usuário</label>
+                    <input required type="text" name="usuario" placeholder="@">
+                </div>
             </div>
-            <div>
-                <label for="sobrenome">Sobrenome</label>
-                <input required type="text" name="sobrenome">
-            </div>
-            <div>
-                <label for="cpf">CPF</label>
-                <input required type="text" name="cpf">
-            </div>
-            <div>
-                <label for="sexo">Sexo</label>
-                <input required type="url" name="img">
-            </div>
-            <div>
-                <label for="data">Data de Nascimento</label>
-                <input required type="date" name="data">
-            </div>
-            <div>
-                <label for="email">E-mail</label>
-                <input required type="email" name="email">
-            </div>
-            <div>
-                <label for="usuario">Usuário</label>
-                <input required type="text" name="usuario" placeholder="@">
-            </div>
-        </div>
 
-        <legend>
-            <h2>Endereço</h2>
-        </legend>
+            <legend>
+                <h2>Endereço</h2>
+            </legend>
 
-        <div>
-            <div>
-                <label for="endereco">Endereço</label>
-                <input required type="text" name="endereco">
+            <div class="dados">
+                <div class="dado">
+                    <label for="endereco">Endereço</label>
+                    <input required type="text" name="endereco">
+                </div>
+                <div class="dado">
+                    <label for="numero">Número/Complemento</label>
+                    <input required type="text" name="numero">
+                </div>
+                <div class="dado">
+                    <label for="estado">Estado</label>
+                    <input required type="text" name="estado">
+                </div>
+                <div class="dado">
+                    <label for="cidade">Cidade</label>
+                    <input required type="text" name="cidade">
+                </div>
+                <div class="dado">
+                    <label for="cel">Telefone/Celular</label>
+                    <input required type="text" name="cel">
+                </div>
             </div>
-            <div>
-                <label for="numero">Número/Complemento</label>
-                <input required type="text" name="numero">
-            </div>
-            <div>
-                <label for="estado">Estado</label>
-                <input required type="text" name="estado">
-            </div>
-            <div>
-                <label for="cidade">Cidade</label>
-                <input required type="text" name="cidade">
-            </div>
-            <div>
-                <label for="cel">Telefone/Celular</label>
-                <input required type="text" name="cel">
-            </div>
-        </div>
-        <button type="submit"> Enviar </button>
-    </form>
+            <button type="submit"> Enviar </button>
+        </form>
     </div>
+
 </body>
 
 </html>
