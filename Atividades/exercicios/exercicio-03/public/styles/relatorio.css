@@ -1,0 +1,38 @@
+#page_relatorio h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-top: 60px;
+}
+
+#page_relatorio table {
+    margin-left: 35px;
+    width: 95%;    
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff1e6;
+    border:3px dotted #463f3a;
+}
+
+#page_relatorio td {
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a;
+}
+
+#page_relatorio th {
+    border: 1px solid #463f3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    color: #ff686b
+}
+
+body{
+    background-image: url("/public/images/background_perfil.jpg");
+    background-repeat: inherit;
+}

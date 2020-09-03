@@ -1,0 +1,82 @@
+#page_cadastro h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-bottom: 40px;
+}
+
+#page_cadastro h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#page_cadastro label {
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+}
+
+#page_cadastro form {
+    background-color: #fff1e6;
+    padding: 100px;
+    border-radius: 8px;
+    margin: 80px auto;
+    max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    border:3px dotted #463f3a;
+}
+
+#page_cadastro legend {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#page_cadastro .dado {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+#page_cadastro .dados {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+#page_cadastro input, #page_cadastro select {
+    background-color: #ff686b; 
+    color: #f4f3ee;
+}
+
+
+
+#alinhando_botao button {
+    margin-top: 50px;
+    height: 40px;
+    background-color: #463f3a;
+    border-radius: 8px;
+    color: #f4f3ee;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url("/public/images/background_perfil.jpg");
+    background-repeat: inherit;
+}
+
+#page_cadastro input::placeholder{
+    color:#f4f3ee;
+}

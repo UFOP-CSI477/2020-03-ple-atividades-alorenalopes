@@ -1,0 +1,41 @@
+#page_perfil div img {
+    width: 40%;
+    border-radius: 8px 8px 8px 8px;
+    object-fit: cover;
+}
+
+
+#page_perfil h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #463f3a
+}
+
+#page_perfil p {
+    font-family: 'Roboto', sans-serif;
+    color: #ff686b
+}
+
+#page_perfil h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #8a817c;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#card_center{
+    justify-content: center;
+}
+
+body{
+    background-image: url("/public/images/background_perfil.jpg");
+    background-repeat: inherit;
+}
+
+.centralizar{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/styles/index.css">
+    <link rel="stylesheet" href="/public/styles/cadastros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="page_cadastro">
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #463f3a;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="/src/views/index.html">Home <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Lançamentos</a>
+                    <a class="nav-link" href="/src/views/relatorio.html">Relatórios</a>
+                    <a class="nav-link" href="/src/views/perfil.html">Perfil</a>
+                    <a class="nav-link" href="#">Sair</a>
+                </div>
+            </div>
+        </nav>
+
+        <form>
+            <legend>
+                <h2>Dados Pessoais</h2>
+            </legend>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Sobrenome</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <label class="col-form-label col-sm-2 pt-0">Sexo</label>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Feminino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Prefiro não informar
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <label for="cpf" class="col-sm-2 col-form-label">CPF</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cpf" placeholder=" _ _ _ . _ _ _ . _ _ _ - _ _">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="datadeAniversario" class="col-sm-2 col-form-label">Data de Nascimento</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="datadeAniversario" style="align-items: center; justify-content: center;">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="usuario" class="col-sm-2 col-form-label">Usuário</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="usario" placeholder="@">
+                </div>
+            </div>
+
+            <legend>
+                <h2>Endereço</h2>
+            </legend>
+
+            <div class="form-group row">
+                <label for="endereco" class="col-sm-2 col-form-label">Endereço</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="endereco">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="numero" class="col-sm-2 col-form-label">Número</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="numero">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="estado" class="col-sm-2 col-form-label">Estado</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="estado">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Cidade</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telefone" placeholder="( ) _ _ _ _ _ _ _ _ _">
+                </div>
+            </div>
+
+            <div id="alinhando_botao">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>
