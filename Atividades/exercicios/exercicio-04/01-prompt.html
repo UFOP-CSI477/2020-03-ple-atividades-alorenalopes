@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script>
+        function carregarDados() {
+
+            const nome = window.prompt('Insira seu nome:')
+            const idade = window.prompt('Insira sua idade:')
+            const data = window.prompt('Insira seu aniversário:')
+            const endereco = window.prompt('Insira seu endereço:')
+
+            document.getElementById("nome").innerHTML = nome;
+            document.getElementById("idade").innerHTML = idade;
+            document.getElementById("data").innerHTML = data;
+            document.getElementById("endereco").innerHTML = endereco;
+
+        }
+    </script>
+</head>
+
+<body>
+    <div style="display: flex; margin-top: 200px; justify-content: center; align-items:center ;">
+        <ul class="list-group" id="dados" style="width: 300px;" >
+            <li class="list-group-item list-group-item-primary" id="nome"></li>
+            <li class="list-group-item list-group-item-secondary" id="idade"></li>
+            <li class="list-group-item list-group-item-success" id="data"></li>
+            <li class="list-group-item list-group-item-danger" id="endereco"></li>
+            <button type="button" class="btn btn-dark" onclick="carregarDados()">Carregar</button>
+        </ul>
+    </div>
+</body>
+
+</html>
