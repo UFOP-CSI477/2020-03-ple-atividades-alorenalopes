@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script>
+        function carregarDados() {
+
+            const nome = document.getElementsByName("nome")[0].value;
+            const idade = document.getElementsByName("idade")[0].value;
+            const dataAniversario = document.getElementsByName("dataAniversario")[0].value;
+            const endereco = document.getElementsByName("endereco")[0].value;
+
+
+            document.getElementById("nomeLista").innerHTML = nome;
+            document.getElementById("idadeLista").innerHTML = idade;
+            document.getElementById("dataLista").innerHTML = dataAniversario;
+            document.getElementById("enderecoLista").innerHTML = endereco;
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <div class="form-group" action="post" name="frmDados"
+            style="display:grid; margin-top: 20px; justify-content: center; align-items:center ;">
+            <label>Nome</label>
+            <input type="text" class="form-control" name="nome" style="width: 300px;">
+            <label>Idade</label>
+            <input type="number" class="form-control" name="idade">
+            <label>Data de Nascimento</label>
+            <input type="date" class="form-control" name="dataAniversario">
+            <label>Endereço</label>
+            <input type="text" class="form-control" name="endereco">
+            <button type="button" class="btn btn-dark" onclick="carregarDados()"
+                style="margin-top: 20px;">Submit</button>
+        </div>
+    </form>
+
+    <div style="display:flex; margin-top: 50px; justify-content: center; align-items:center ;">
+        <ul class="list-group" id="dados" style="width: 300px;">
+            <li class="list-group-item list-group-item-primary" id="nomeLista"></li>
+            <li class="list-group-item list-group-item-secondary" id="idadeLista"></li>
+            <li class="list-group-item list-group-item-success" id="dataLista"></li>
+            <li class="list-group-item list-group-item-danger" id="enderecoLista"></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

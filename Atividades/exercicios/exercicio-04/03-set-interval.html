@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+
+        let id;
+        let controle = false;
+
+        function processo() {
+            let data = new Date();
+            document.getElementById("data").innerHTML = `${data.toTimeString()}`;
+
+        }
+
+        function iniciar() {
+            if (!controle) {
+                id = setInterval(processo, 1000);
+                controle = true;
+            }
+        }
+
+        function parar() {
+            clearInterval(id);
+            controle = false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style="display: grid; justify-content: center; align-items: center;">
+
+        <button type="button" class="btn btn-dark" onclick="iniciar()" style="margin-top: 20px; width: 300px;">Iniciar</button>
+
+        <button type="button" class="btn btn-dark" onclick="parar()" style="margin-top: 20px;  width: 300px;">Parar</button>
+
+        <span id="data" class="badge badge-pill badge-primary" style = "margin-top: 20px;  width: 300px;"></span>
+
+    </div>
+
+</body>
+
+</html>
