@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="api.js"></script>
+</head>
+
+<body>
+
+    <div style="display: grid; grid-template-columns: 6fr 6fr">
+        <form name="frmDados">
+            <div class="form-group"
+                style="display:grid; margin-top: 20px; justify-content: center; align-items:center ;">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" value="" style="width: 300px;">
+
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" value="" name="cpf"
+                    placeholder="Informe o cpf com os pontos e hífen">
+
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" value="" name="cep">
+
+                <button type="button" class="btn btn-dark" onclick="carregarEndereco()"
+                    style="margin-top: 20px;">Submit</button>
+            </div>
+        </form>
+
+        <div style="margin-top: 50px; margin-bottom: 25px; justify-content: center; align-items:center ;">
+            <ul class="list-group" id="dados" style="width: 300px;">
+                <li class="list-group-item list-group-item-primary" id="nomeLista"></li>
+                <li class="list-group-item list-group-item-success" id="cpfLista"></li>
+                <li class="list-group-item list-group-item-warning" id="enderecoLista"></li>
+                <li class="list-group-item list-group-item-info" id="bairroLista"></li>
+                <li class="list-group-item list-group-item-danger" id="cidadeLista"></li>
+                <li class="list-group-item list-group-item-dark" id="cepLista"></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
