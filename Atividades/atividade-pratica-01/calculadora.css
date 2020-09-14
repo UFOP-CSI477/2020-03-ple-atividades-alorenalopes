@@ -1,0 +1,82 @@
+
+#id_css{
+    margin: 50px 500px 50px 500px;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 550px;
+    background-color: white;
+} 
+
+#display_css{
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px groove black;
+    border-radius: 8px;
+    height: 150px;
+    background-color: white; 
+}
+
+body{
+    background-color: black;
+}
+
+.numeros{
+    margin: 3px;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.conjuntos{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.button_operacoes{
+    margin-top:12px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.button_igual{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 30px;
+    width: 300px;
+}
+
+.button_limpar{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
+    font-size: 30px;
+    width: 300px;
+}
+
+.button_alinhamento{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.button_group_numeros{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.button_group_operacoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
+h3{
+    text-align: end;
+    margin-top: 50px;
+}
+
+h2{
+    text-align: end;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/calculadora.css">
+
+</head>
+
+<body>
+    <div id="id_css">
+        <div id="display_css">
+            <h2 id="display_numbers"></h2>
+            <h3 id="display_results"></h3>
+        </div>
+
+        <div class="button_alinhamento">
+            <div class="button_group_numeros">
+                <div class="conjuntos">
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(1)">1</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(4)">4</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(7)">7</button>
+                </div>
+
+                <div class="conjuntos">
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(2)">2</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(5)">5</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(8)">8</button>
+                </div>
+
+                <div class="conjuntos">
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(3)">3</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(6)">6</button>
+                    <button type="button" class="btn btn-secondary numeros" onclick="button_numbers(9)">9</button>
+                </div>
+            </div>
+
+            <div class="button_group_operacoes">
+                <button type="button" class="btn btn-danger button_operacoes" onclick="button_numbers(`+`)">&plus;</button>
+                <button type="button" class="btn btn-danger button_operacoes" onclick="button_numbers(`-`)">&ndash;</button>
+                <button type="button" class="btn btn-danger button_operacoes" onclick="button_numbers(`*`)">&times;</button>
+                <button type="button" class="btn btn-danger button_operacoes" onclick="button_numbers(`/`)">&divide;</button>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info button_limpar" onclick="buttonlimpar()"> &Scy; </button>
+            <button type="button" class="btn btn-success button_igual" onclick="buttonigual()">&equals;</button>
+        </div>
+
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
