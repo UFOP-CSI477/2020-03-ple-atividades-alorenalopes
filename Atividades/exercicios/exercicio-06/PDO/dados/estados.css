@@ -1,0 +1,10 @@
+body{
+    background-color:aliceblue;
+}
+
+#estados_css{
+    margin: 50px 400px 50px 400px;
+    border: 4px dotted black;
+    border-radius: 8px;
+    background-color: white;
+}
