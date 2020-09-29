@@ -13,6 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Models\Estado;
+use App\Models\Produto;
+use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ProdutoController;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('principal');
+})->name('principal');
+
+Route::get('/estados', function(){
+    $estados = Estado::all();
+    return view('listaEstado', ['dados' => $estados]);
 });
+
+Route::get('/estados/{id}', function($id){
+    $estado = Estado::findorFail($id);
+    return view('listaEstado', ['dados' => $estado]);
+});
+
+Route::get('/produtos', function(){
+    $produtos = Produto::all();
+    return view('listaProduto', ['dados' => $produtos]);
+});
+
+Route::get('/produtos/{id}', function($id){
+    $produto = Produto::find($id);
+    return view('listaProduto', ['dados' => $produto]);
+});
+
+Route::resource('/estados', EstadoController::class);
+Route::resource('/produtos', ProdutoController::class);
