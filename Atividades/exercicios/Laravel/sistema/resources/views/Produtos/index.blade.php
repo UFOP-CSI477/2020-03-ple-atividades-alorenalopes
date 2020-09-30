@@ -2,6 +2,8 @@
 
 @section('conteudo')
 
+<a href="{{ route('produtos.create')}}">Cadastrar</a>
+
 
 <table class="table">
 
