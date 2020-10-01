@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Equipamentos;
 use Illuminate\Http\Request;
 
+
 class EquipamentoController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class EquipamentoController extends Controller
      */
     public function index()
     {
-        //
+        $equipamentos = Equipamentos::orderBy('nome')->get();
+        return view('equipamentos.index', ['dados' => $equipamentos]);
     }
 
     /**

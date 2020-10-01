@@ -14,7 +14,7 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

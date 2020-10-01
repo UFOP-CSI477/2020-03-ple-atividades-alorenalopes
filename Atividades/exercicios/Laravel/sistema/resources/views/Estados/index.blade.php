@@ -2,9 +2,7 @@
 
 @section('conteudo')
 
-    <a href="{{ route('estados.create') }}">Cadastrar</a>
-
-    <table class="table table-bordered table-hover table-striped">
+    <table class="table table-bordered table-hover table-striped margem">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>

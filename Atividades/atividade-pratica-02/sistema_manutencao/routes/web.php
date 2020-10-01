@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Equipamentos;
-use App\Models\Registros;
-use App\Models\User;
+use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +18,6 @@ use App\Models\User;
 Route::get('/', function () {
     return view('principal');
 })->name('principal');
+
+Route::resource('/equipamentos', EquipamentoController::class);
+Route::resource('/registros', RegistroController::class);
