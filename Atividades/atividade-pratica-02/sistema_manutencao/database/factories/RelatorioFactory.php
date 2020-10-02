@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Equipamento;
+use App\Models\Relatorio;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class EquipamentosFactory extends Factory
+class RelatorioFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Equipamentos::class;
+    protected $model = Relatorio::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class EquipamentosFactory extends Factory
     public function definition()
     {
         return [
-            'nome'=> $this->faker->word,
+            //
         ];
     }
 }

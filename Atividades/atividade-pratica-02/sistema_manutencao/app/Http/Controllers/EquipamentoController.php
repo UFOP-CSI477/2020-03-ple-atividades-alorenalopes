@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Equipamentos;
+use App\Models\Equipamento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class EquipamentoController extends Controller
@@ -15,9 +16,10 @@ class EquipamentoController extends Controller
      */
     public function index()
     {
-        $equipamentos = Equipamentos::orderBy('nome')->get();
+        $equipamentos = Equipamento::orderBy('nome')->get();
         return view('equipamentos.index', ['dados' => $equipamentos]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +28,7 @@ class EquipamentoController extends Controller
      */
     public function create()
     {
-        //
+        return view('equipamentos.create');
     }
 
     /**
@@ -37,7 +39,9 @@ class EquipamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Equipamento::create($request->all());
+        session()->flash('mensagem', 'Equipamento cadastrado com sucesso!');
+        return redirect()->route('equipamentos.index');
     }
 
     /**
@@ -46,9 +50,14 @@ class EquipamentoController extends Controller
      * @param  \App\Models\Equipamentos  $equipamentos
      * @return \Illuminate\Http\Response
      */
-    public function show(Equipamentos $equipamentos)
+    public function show(Equipamento $equipamento)
     {
-        //
+        if (Auth::check()) {
+            return view('equipamentos.show', ['dados' => $equipamento]);
+        } else {
+            session()->flash('mensagem', 'Operação não permitida!');
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -57,9 +66,9 @@ class EquipamentoController extends Controller
      * @param  \App\Models\Equipamentos  $equipamentos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Equipamentos $equipamentos)
+    public function edit(Equipamento $equipamento)
     {
-        //
+        return view('equipamentos.edit', ['dados' => $equipamento]);
     }
 
     /**
@@ -69,9 +78,13 @@ class EquipamentoController extends Controller
      * @param  \App\Models\Equipamentos  $equipamentos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipamentos $equipamentos)
+    public function update(Request $request, Equipamento $equipamento)
     {
-        //
+        $equipamento->fill($request->all());
+        $equipamento->save();
+
+        session()->flash('mensagem', 'Equipamento atualizado com sucesso!');
+        return redirect()->route('equipamentos.index');
     }
 
     /**
@@ -80,8 +93,17 @@ class EquipamentoController extends Controller
      * @param  \App\Models\Equipamentos  $equipamentos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Equipamentos $equipamentos)
+    public function destroy(Equipamento $equipamento)
     {
-        //
+
+        $equipamentos =  Equipamento::join('registros', $equipamento->id, '=', 'registros.equipamentos_id')
+            ->get();
+        if ($equipamentos->count() > 0) {
+            session()->flash('mensagem', 'Exclusão não permitida, existem manutenções associadas!');
+        } else {
+            $equipamento->delete();
+            session()->flash('mensagem', 'Equipamento excluído com sucesso!');
+        }
+        return redirect()->route('equipamentos.index');
     }
 }

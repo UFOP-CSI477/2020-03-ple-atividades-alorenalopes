@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Equipamentos extends Model
+class Registro extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id','equipamentos_id', 'descricao','datalimite','tipo'];
+
+  
 }
+

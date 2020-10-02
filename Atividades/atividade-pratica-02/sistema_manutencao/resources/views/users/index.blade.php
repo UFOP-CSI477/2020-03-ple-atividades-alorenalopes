@@ -5,16 +5,18 @@
     <table class="table table-bordered table-hover table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>Nome</th>
                 <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach($dados as $d)
+            @foreach($dados as $r)
                 <tr>
-                    <td>{{ $d->nome }} </td>
-                    <td><a href="{{route('equipamentos.show', $d->id)}}">{{ $d->id }}</a></td>
+                    <td>{{ $r->id }}</td>
+                    <td>{{ $r->name}} </td>
+                    <td>{{ $r->email}} </td>
                 </tr>
             @endforeach
         </tbody>

@@ -46,7 +46,6 @@ class EstadoController extends Controller
         Estado::create($request->all());
         session()->flash('mensagem', 'Estado cadastrado com sucesso!');
         return redirect()->route('estados.index');
-
     }
 
     /**
@@ -57,7 +56,7 @@ class EstadoController extends Controller
      */
     public function show(Estado $estado)
     {
-        return view('estados.show', [ 'estado' => $estado]);
+        return view('estados.show', ['estado' => $estado]);
     }
 
     /**
@@ -68,7 +67,7 @@ class EstadoController extends Controller
      */
     public function edit(Estado $estado) // exibir o form -> action: update
     {
-        return view('estados.edit', [ 'estado' => $estado ]);
+        return view('estados.edit', ['estado' => $estado]);
     }
 
     /**
@@ -99,8 +98,12 @@ class EstadoController extends Controller
         // dd($estado);
 
         // Validação:
-        $estado->delete();
-        session()->flash('mensagem', 'Estado excluído com sucesso!');
+        if ($estado->cidades->count() > 0) {
+            session()->flash('mensagem', 'Exclusão não permitida, existem cidades associadas!');
+        } else {
+            $estado->delete();
+            session()->flash('mensagem', 'Estado excluído com sucesso!');
+        }
         return redirect()->route('estados.index');
     }
 }

@@ -39,7 +39,8 @@
                         Cidades
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Cadastrar</a>
+                        <a class="dropdown-item" href="{{ route('cidades.index') }}">Listar</a>
+                        <a class="dropdown-item" href="{{ route('cidades.create') }}">Cadastrar</a>
                     </div>
                 </li>
 
@@ -50,6 +51,16 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('produtos.index') }}">Listar</a>
                         <a class="dropdown-item" href="{{ route('produtos.create') }}">Cadastrar</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Compras
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('compras.index') }}">Listar</a>
+                        <a class="dropdown-item" href="{{ route('compras.create') }}">Cadastrar</a>
                     </div>
                 </li>
             </ul>

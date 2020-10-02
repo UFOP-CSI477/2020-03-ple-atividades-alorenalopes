@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Equipamentos;
-use App\Models\Registros;
+use App\Models\Equipamento;
+use App\Models\Registro;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,7 +24,7 @@ class RegistrosFactory extends Factory
     public function definition()
     {
         return [
-            'equipamentos_id' => Equipamentos::factory(), 
+            'equipamentos_id' => Equipamento::factory(), 
             'user_id' => User::factory(),
             'descricao'=> $this->faker->word,
             'datalimite' => $this->faker->date('Y-m-d'),

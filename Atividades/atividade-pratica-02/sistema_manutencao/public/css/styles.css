@@ -1,0 +1,19 @@
+.cadastro{
+    margin: 50px 400px 50px 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.margem{
+    margin-top: 40px;
+}
+
+.botaocentralizado{
+    margin-left: 1250px;
+}
+
+.corletra{
+    color:white;
+    font-weight: bold;
+
+}

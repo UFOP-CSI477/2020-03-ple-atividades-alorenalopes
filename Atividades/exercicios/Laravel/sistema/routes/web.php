@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\CidadeController;
+use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\PessoasController;
 
 Route::get('/', function () {
     return view('principal');
@@ -42,3 +45,6 @@ Route::get('/produtos/{id}', function($id){
  */
 Route::resource('/estados', EstadoController::class);
 Route::resource('/produtos', ProdutoController::class);
+Route::resource('/cidades', CidadeController::class);
+Route::resource('/compras', ComprasController::class);
+Route::resource('/pessoas', PessoasController::class);
