@@ -1,0 +1,14 @@
+.cadastro{
+    margin: 100px 400px 100px 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.margem{
+    margin-top: 40px;
+}
+
+.botaocentralizado{
+    margin-left: 1250px;
+}
