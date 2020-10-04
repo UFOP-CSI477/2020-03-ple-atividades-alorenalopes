@@ -62,8 +62,8 @@
                         Agendamentos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item nav-link" href="#">Cadastrar</a>
-                        <a class="dropdown-item nav-link" href="#">Listagem</a>
+                        <a class="dropdown-item nav-link" href="{{route('agendamentos.create')}}">Cadastrar</a>
+                        <a class="dropdown-item nav-link" href="{{route('agendamentos.index')}}">Listagem</a>
                     </div>
                 </li>
 

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Agendamento;
 use Illuminate\Http\Request;
 use App\Models\Pessoa;
+use App\Models\Coleta;
+use Illuminate\Support\Facades\Auth;
 
 class AgendamentoController extends Controller
 {
@@ -15,9 +17,15 @@ class AgendamentoController extends Controller
      */
     public function index()
     {
+        $agendanome = Agendamento::orderBy(
+            Pessoa::select('nome')
+                ->whereColumn('id', 'agendamentos.pessoa_id')
+                ->orderBy('nome')
+        )->get();
 
-        $agendamentos = Agendamento::orderBy('data', 'desc')->get();
-        return view('agendamentos.index', ['dados' => $agendamentos]);
+        $agendadata = Agendamento::orderByDesc('data')->get();
+
+        return view('agendamentos.index', ['dados' => $agendanome, 'data' => $agendadata]);
     }
 
     /**
@@ -27,7 +35,10 @@ class AgendamentoController extends Controller
      */
     public function create()
     {
-        //
+
+        $pacientes = Pessoa::orderBy('nome')->get();
+        $coletas = Coleta::orderBy('nome')->get();
+        return view('agendamentos.create', ['pacientes' => $pacientes, 'coletas' => $coletas]);
     }
 
     /**
@@ -38,7 +49,9 @@ class AgendamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Agendamento::create($request->all());
+        session()->flash('mensagem', 'Agendamento cadastrado com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 
     /**
@@ -49,7 +62,12 @@ class AgendamentoController extends Controller
      */
     public function show(Agendamento $agendamento)
     {
-        //
+        if (Auth::check()) {
+            return view('agendamentos.show', ['dados' => $agendamento]);
+        } else {
+            session()->flash('mensagem', 'Operação não permitida!');
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -60,7 +78,9 @@ class AgendamentoController extends Controller
      */
     public function edit(Agendamento $agendamento)
     {
-        //
+        $pacientes = Pessoa::orderBy('nome')->get();
+        $coletas = Coleta::orderBy('nome')->get();
+        return view('agendamentos.edit', ['dados' => $agendamento, 'pacientes' => $pacientes, 'coletas' => $coletas]);
     }
 
     /**
@@ -72,7 +92,11 @@ class AgendamentoController extends Controller
      */
     public function update(Request $request, Agendamento $agendamento)
     {
-        //
+        $agendamento->fill($request->all());
+        $agendamento->save();
+
+        session()->flash('mensagem', 'Agendamento atualizado com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 
     /**
@@ -83,6 +107,8 @@ class AgendamentoController extends Controller
      */
     public function destroy(Agendamento $agendamento)
     {
-        //
+        $agendamento->delete();
+        session()->flash('mensagem', 'Agendamento excluído com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 }
