@@ -1,5 +1,6 @@
 .display{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 120px;
     margin-right: 120px; 
 }

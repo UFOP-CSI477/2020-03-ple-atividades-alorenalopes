@@ -2,8 +2,11 @@
 
 @section('conteudo')
 <div class="back">
-    <img src="{{ asset('images/arrow.svg') }}" alt="Voltar" srcset="">
+    <a href="{{route('home')}}">
+        <img src="{{ asset('images/arrow.svg') }}" alt="Voltar">
+    </a>
 </div>
+
 <div class="display">
     @foreach($dados as $d)
     <div class="cardE">
