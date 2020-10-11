@@ -2,28 +2,37 @@
 
 @section('conteudo')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-autenticacao">
+<div class="back">
+    <a href="{{route('exames.create')}}">
+        <img src="{{ asset('images/arrow.svg') }}" alt="Voltar">
+    </a>
+</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('pastas.store') }}">
-                        @csrf
+<div class="posi">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
 
-                        <div class="form-group row">
-                            <label for="nome" class="col-md-4 col-form-label text-md-right">Nome do Exame</label>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('pastas.store') }}">
+                            @csrf
 
-                            <div class="col-md-6">
-                                <input id="nome" type="nome" class="form-control" name="nome" required autofocus>
+                            <div class="form-group row">
+                                <label for="nome" class="col-md-4 col-form-label text-md-right">Nome do Exame</label>
+
+                                <div class="col-md-6">
+                                    <input id="nome" type="nome" class="form-control" name="nome" required autofocus>
+                                </div>
                             </div>
-                        </div>
+                            <div class="btnExame">
+                                <button type="submit" class="btn-autenticacao">
+                                    Cadastrar
+                                </button>
+                            </div>
 
-                        <button type="submit" class="btn button-autenticacao">
-                            Cadastrar
-                        </button>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

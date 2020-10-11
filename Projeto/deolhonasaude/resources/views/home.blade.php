@@ -1,17 +1,18 @@
 @extends('logo')
 
 @section('conteudo')
-<div class="home-perfil">
-    <h1>{{ Auth::user()->name }}</h1>
+<div class="nameHome">
+    <h1>Seja bem vindo, <span>{{ Auth::user()->name }}</span></h1>
 </div>
 
-<div class="principal-conteudo">
-    <div class="principal-img">
-        <img src="assets/img/homelogado.svg" alt="">
+<div class="principalHome">
+    <div class="imgHome">
+        <img src="{{ asset('images/homelogado.svg') }}" alt="">
     </div>
-    <div class="principal-img">
-        <a href="{{route('exames.create')}}">Adicionar exame</a>
-        <a href="{{route('pastas.index')}}">Exames</a>
+    <div class="btnHome">
+        <a class="btninHome" href="{{route('pastas.index')}}">Listar exames</a>
+        <a class="btninHome" href="{{route('exames.create')}}">Adicionar exames</a>
+        <a class="btninHome" href="{{Auth::logout()}}">Logout</a>
     </div>
 </div>
 

@@ -18,15 +18,16 @@
     <div class="principal">
         <h2>De
             <a href="{{route('principal')}}">
-                <img src="assets/img/olho.svg" alt="">
+                <img src="{{ asset('images/olho.svg') }}" alt="">
             </a>
             na saúde
         </h2>
     </div>
 
+
     <div class="principal-conteudo">
         <div class="principal-img">
-            <img src="assets/img/home1svg.svg" alt="">
+            <img src="{{ asset('images/home.svg') }}" alt="">
             <h1>CUIDE DE VOCÊ</h1>
             <p>Cuide da sua saúde</p>
         </div>
@@ -36,16 +37,23 @@
                     armazenando todos os resultados dos seus exames e ficando sempre
                     DE OLHO NA SUA SAÚDE.</h3>
             </div>
-            <a href="{{route('login')}}">Login</a>
-            <a href="{{route('register')}}">Registrar</a>
+
+            <div class="btn">
+                @guest
+                <a href="{{route('login')}}">Login</a>
+                <a href="{{route('register')}}">Registrar</a>
+                @endguest
+                @if (Auth::check())
+                <a href="{{route('home')}}">Entrar</a>
+                @endif
+            </div>
         </div>
     </div>
+    @yield('conteudo')
 
     <div class="footer">
         <p>Ícones feitos por <a href="https://www.flaticon.com/br/autores/catkuro" title="catkuro">catkuro</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a></p>
     </div>
-
-    @yield('conteudo')
 </body>
 
 </html>

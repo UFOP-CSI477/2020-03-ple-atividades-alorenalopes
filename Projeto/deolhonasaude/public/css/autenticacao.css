@@ -1,0 +1,19 @@
+.btnlog{
+    display: flex;
+    flex: 1;
+    justify-items: center;
+}
+
+.btn-autenticacao{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 300px;
+    border: solid;
+    border-color: aliceblue;
+    color: aliceblue;
+    border-radius: 12px;
+    background-color: #e63946;
+    text-align: center
+}
+

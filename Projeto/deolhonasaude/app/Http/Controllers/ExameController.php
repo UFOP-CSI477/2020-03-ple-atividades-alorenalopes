@@ -15,9 +15,9 @@ class ExameController extends Controller
      */
     public function index()
     {
-        $exames = Exame::orderBy('date')->get();
-        return view('exames.index', ['dados' => $exames]);
+      
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +39,7 @@ class ExameController extends Controller
     public function store(Request $request)
     {
         Exame::create($request->all());
-        return redirect()->route('exames.index');
+        return redirect()->route('pastas.index');
     }
 
     /**
@@ -50,7 +50,6 @@ class ExameController extends Controller
      */
     public function show(Exame $exame)
     {
-        return view('exames.show', ['dados' => $exame]);
     }
 
     /**
@@ -61,7 +60,6 @@ class ExameController extends Controller
      */
     public function edit(Exame $exame)
     {
-        return view('exames.edit', ['dados' => $exame]);
     }
 
     /**
@@ -73,9 +71,7 @@ class ExameController extends Controller
      */
     public function update(Request $request, Exame $exame)
     {
-        $exame->fill($request->all());
-        $exame->save();
-        return redirect()->route('exames.index');
+       
     }
 
     /**
@@ -86,7 +82,6 @@ class ExameController extends Controller
      */
     public function destroy(Exame $exame)
     {
-        $exame->delete();
-        return redirect()->route('exames.index');
+        
     }
 }

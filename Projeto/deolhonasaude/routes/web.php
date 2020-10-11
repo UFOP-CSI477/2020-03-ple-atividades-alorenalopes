@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ExameController;
 use App\Http\Controllers\PastaController;
+use App\Models\Exame;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,22 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/pastas', PastaController::class);
-Route::resource('/exames', ExameController::class);
+Route::get('/listar/{nome}', function ($nome) {
+
+    $exames = Exame::get();
+    return view('listar', ['dados' => $exames, 'tipo' => $nome]);
+})->name('listar')->middleware('auth');
+
+Route::get('/deletar/{exame}', function ($exame) {
+
+    $exame->delete();
+    return redirect()->route('pastas.index');
+})->name('deletar');
+
+
+Route::resource('/pastas', PastaController::class)->middleware('auth');
+Route::resource('/exames', ExameController::class)->middleware('auth');
+
 
 Auth::routes();
 

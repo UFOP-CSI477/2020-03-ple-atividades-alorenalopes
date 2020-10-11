@@ -2,11 +2,16 @@
 
 @section('conteudo')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-autenticacao">
+<div class="back">
+    <a href="{{route('home')}}">
+    <img src="{{ asset('images/arrow.svg') }}" alt="Voltar">
+    </a>
+</div>
 
+<div class="container posiExame corr">
+    <div class="row justify-content-center corr">
+        <div class="col-md-8 corr">
+            <div class="card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('exames.store') }}">
                         @csrf
@@ -30,7 +35,9 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <a href="{{route('pastas.create')}}">Adicionar novo tipo de exame</a>
+                            <div class="addExame">
+                                <a href="{{route('pastas.create')}}">Adicionar novo tipo de exame</a>
+                            </div>
                         </div>
 
 
@@ -58,10 +65,11 @@
                                 <textarea id="observacoes" type="text" class="form-control" name="observacoes" required autofocus></textarea>
                             </div>
                         </div>
-
-                        <button type="submit" class="btn button-autenticacao">
-                            Cadastrar
-                        </button>
+                        <div class="btnExame">
+                            <button type="submit" class="btn-autenticacao">
+                                Cadastrar
+                            </button>
+                        </div>
 
                     </form>
                 </div>

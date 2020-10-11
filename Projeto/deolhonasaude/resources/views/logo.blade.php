@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/autenticacao.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/createexame.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/listaPasta.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,17 +23,19 @@
     <div class="principal">
         <h2>De
             <a href="{{route('home')}}">
-            <img src="assets/img/olho.svg" alt="">
+            <img src="{{ asset('images/olho.svg') }}" alt="">
             </a>
             na saúde
         </h2>
     </div>
 
+    
+
+    @yield('conteudo')
+
     <div class="footer">
         <p>Ícones feitos por <a href="https://www.flaticon.com/br/autores/catkuro" title="catkuro">catkuro</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a></p>
     </div>
-
-    @yield('conteudo')
 </body>
 
 </html>

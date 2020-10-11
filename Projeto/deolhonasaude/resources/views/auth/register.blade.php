@@ -1,10 +1,17 @@
 @extends('logo')
 
 @section('conteudo')
+
+<div class="back">
+    <a href="{{route('principal')}}">
+        <img src="{{ asset('images/arrow.svg') }}" alt="Voltar">
+    </a>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-autenticacao">
+            <div class="card ">
                 <div class="card-header">{{ __('Registro') }}</div>
 
                 <div class="card-body">
@@ -78,7 +85,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn button-autenticacao">
+                                <button type="submit" class="btn-autenticacao">
                                     {{ __('Registrar') }}
                                 </button>
                             </div>

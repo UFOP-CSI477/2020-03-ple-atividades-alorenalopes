@@ -21,7 +21,7 @@ background-color: #fffffc;
 
 .principal-conteudo {
     display: flex;
-    margin: 60px auto;
+    margin: 30px auto;
     flex: 1;
 }
 
@@ -82,10 +82,10 @@ background-color: #fffffc;
 
 .footer {
     position: fixed;
-    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    background-color:#ffebff;;
+    width: 40%;
+    font-size: smaller;
     color: #b7b7a4;
     text-align: end;
   }
@@ -94,22 +94,7 @@ background-color: #fffffc;
     color: #b7b7a4;
   }
 
-.button-autenticacao{
-    margin-top: 10px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    font-family: Open Sans;
-    font-size: 20px;
-    font-weight: 80;
-    padding: 15px;
-    background-color: #e63946;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center
-}
+
 
 .card-autenticacao{
     margin-top: 100px;
@@ -124,4 +109,24 @@ background-color: #fffffc;
 
 .principal-conteudo .textfold h4{
     font-size: 28px;
+}
+
+.btn{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.btn a + a{
+    height: 60px;
+    width: 200px;
+    margin-right: 100px;
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.btn a{
+    margin-bottom: 50px;
+    margin-top: 60px;
 }

@@ -37,7 +37,7 @@ class PastaController extends Controller
     public function store(Request $request)
     {
         Pasta::create($request->all());
-        return redirect()->route('pastas.index');
+        return redirect()->route('exames.create');
     }
 
     /**

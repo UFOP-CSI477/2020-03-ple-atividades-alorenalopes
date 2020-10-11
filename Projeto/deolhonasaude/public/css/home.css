@@ -1,12 +1,56 @@
-.home-perfil img{
-    margin-top: 60px;
-    width: 50px;
-    height: 50px;
+.nameHome{
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+.nameHome h1{
+    font-size: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.home-card img{
-    margin-left: 50px;
-    margin-top: 100px;
-    width: 100px;
-    height: 100px;
+.nameHome h1 span{
+    color: #e63946;
+}
+
+.principalHome{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.principalHome .imgHome{
+    margin: 30px auto;
+    margin-right: 0px;
+}
+
+.principalHome .imgHome img{
+    height: 300px;
+    width: 300px;
+}
+
+.principalHome .btnHome{
+    display: flex;
+    margin: auto ;
+    flex-direction: column;
+}
+
+.principalHome .btnHome .btninHome{
+    display: flex;
+    height: 60px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 300px;
+    border: solid 2px #e63946;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: #e63946;
+    text-align: center
+}
+
+.principalHome .btnHome .btninHome a{
+    text-align: center;
 }

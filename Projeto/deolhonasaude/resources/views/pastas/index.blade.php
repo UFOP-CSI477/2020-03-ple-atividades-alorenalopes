@@ -1,16 +1,20 @@
 @extends('logo')
 
 @section('conteudo')
-
-@foreach($dados as $d)
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{$d->nome}}</h5>
-        <a href="{{route('exames.index')}}" class="card-link">Exibir todos</a>
-        <a href="{{route('exames.create')}}" class="card-link">Adicionar mais resultados</a>
-    </div>
+<div class="back">
+    <img src="{{ asset('images/arrow.svg') }}" alt="Voltar" srcset="">
 </div>
-@endforeach
+<div class="display">
+    @foreach($dados as $d)
+    <div class="cardE">
+        <h5>{{$d->nome}}</h5>
+        <div class="comp">
+            <a href="{{route('exames.index')}}" class="card-link">Exibir</a>
+            <a href="{{route('exames.create')}}" class="card-link">Adicionar</a>
+        </div>
+    </div>
+    @endforeach
+</div>
 
 
 
