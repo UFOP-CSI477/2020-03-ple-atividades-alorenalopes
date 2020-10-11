@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\Exame;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,7 +18,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'user_id',
+        'pasta_id',
+        'name',
+        'email',
+        'password',
+        'nascimento',
     ];
 
     /**
@@ -26,7 +32,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     /**
@@ -37,4 +44,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function exame(){
+        return $this->hasMany(Exame::class);
+    }
 }
