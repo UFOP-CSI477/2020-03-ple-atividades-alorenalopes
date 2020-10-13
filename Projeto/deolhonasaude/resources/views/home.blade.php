@@ -12,7 +12,15 @@
     <div class="btnHome">
         <a class="btninHome" href="{{route('pastas.index')}}">Listar exames</a>
         <a class="btninHome" href="{{route('exames.create')}}">Adicionar exames</a>
-        <a class="btninHome" href="{{Auth::logout()}}">Logout</a>
+
+        <div>
+            <a class="btninHome" href="{{route('logout')}}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </div>
     </div>
 </div>
 

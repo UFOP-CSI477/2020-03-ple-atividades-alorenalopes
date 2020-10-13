@@ -13,8 +13,8 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/autenticacao.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/createexame.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/listaPasta.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/create.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pasta.css') }}" rel="stylesheet">
 
 </head>
 
@@ -28,8 +28,6 @@
             na saúde
         </h2>
     </div>
-
-    
 
     @yield('conteudo')
 

@@ -82,6 +82,7 @@ class ExameController extends Controller
      */
     public function destroy(Exame $exame)
     {
-        
+        $exame->delete();
+        return redirect()->route('pastas.index');
     }
 }

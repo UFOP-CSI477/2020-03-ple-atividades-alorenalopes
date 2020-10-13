@@ -84,7 +84,12 @@ class PastaController extends Controller
      */
     public function destroy(Pasta $pasta)
     {
-        $pasta->delete();
+        if ($pasta->exame->count() > 0) {
+            '<script type="text/javascript" >
+            alert("Exclusão não permitida, exames associados!");</script>';
+        } else {
+            $pasta->delete();
+        }
         return redirect()->route('pastas.index');
     }
 }

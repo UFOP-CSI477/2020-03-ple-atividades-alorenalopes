@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('/listar/{nome}', function ($nome) {
 
-    $exames = Exame::get();
+    $exames = Exame::orderBy('data', 'desc')->get();
     return view('listar', ['dados' => $exames, 'tipo' => $nome]);
 })->name('listar')->middleware('auth');
 

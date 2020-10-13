@@ -1,0 +1,126 @@
+.display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 120px;
+    margin-right: 120px; 
+}
+
+
+.card-pasta{
+    height: 200px;
+    width: 200px;
+    border: solid 1px #f3faeb;
+    background-color: #b8ecbb ;
+    border-radius: 20px 0px 20px 0px;
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+}
+
+.card-pasta h5{
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.card-pasta .card-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-pasta .card-btn a{
+    height: 35px;
+    width: 170px;
+    background-color: #ec727c;
+    border: solid 2px #ec727c;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.card-pasta .card-descricao{
+
+    flex: 1;
+    text-align: center;
+
+} 
+
+.card-exame{
+    height: 300px;
+    width: 300px;
+    border: solid 1px #f3faeb;
+    background-color: #b8ecbb ;
+    border-radius: 20px 0px 20px 0px;
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+
+.card-exame h6{
+    margin-top: 0px;
+    height: 30px;
+    margin-bottom: 0px;
+
+}
+
+.card-exame h6 + p{
+    margin-top: 0px;
+    height: 30px;
+    margin-bottom: 0px;
+
+}
+
+.card-exame h5{
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.card-exame .card-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-exame .card-btn a{
+    height: 35px;
+    width: 170px;
+    background-color: #ec727c;
+    border: solid 2px #ec727c;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card-exame .card-descricao{
+    text-align: center;
+
+} 
+
+.display-exame{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 120px;
+    margin-right: 120px; 
+}
