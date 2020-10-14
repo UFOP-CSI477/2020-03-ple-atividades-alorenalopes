@@ -48,7 +48,6 @@ class PastaController extends Controller
      */
     public function show(Pasta $pasta)
     {
-        return view('pastas.show', ['dados' => $pasta]);
     }
 
     /**
@@ -83,10 +82,10 @@ class PastaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Pasta $pasta)
-    {
+    {   
+        dd($pasta->exame->count());
         if ($pasta->exame->count() > 0) {
-            '<script type="text/javascript" >
-            alert("Exclusão não permitida, exames associados!");</script>';
+            session()->flash('mensagem', 'Exclusão não permitida, existem exames associados!');
         } else {
             $pasta->delete();
         }

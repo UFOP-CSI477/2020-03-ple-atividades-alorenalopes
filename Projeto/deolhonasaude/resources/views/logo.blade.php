@@ -29,6 +29,12 @@
         </h2>
     </div>
 
+    @if(session('mensagem'))
+    <div class="alert alert-danger">
+        {{session('mensagem')}}
+    </div>
+    @endif
+
     @yield('conteudo')
 
     <div class="footer">

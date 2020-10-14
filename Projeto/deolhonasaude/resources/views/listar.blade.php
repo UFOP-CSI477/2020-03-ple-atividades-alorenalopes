@@ -17,12 +17,13 @@
         <p class="card-descricao">{{$d->resultado}}</p>
         <p class="card-descricao">{{$d->observacoes}}</p>
         <div class="card-btn">
-            <a href="{{route('exames.destroy', $d->id)}}" class="card-link" onclick="event.preventDefault();
-            document.getElementById('delete-form').submit();">Remover</a>
+            <form action="" name="frmDelete" action="{{route('exames.destroy', $d->id)}}" 
+                method="post" onsubmit="return confirm('Confirma a exclusão do Exame?');">
 
-            <form id="delete-form" name="frmDelete" action="{{route('exames.destroy', $d->id)}}" method="post" onsubmit="return confirm('Confirma a exclusão do Exame?');">
                 @csrf
                 @method('DELETE')
+
+                <input type="submit" value="Excluir" class="btn btn-danger">
             </form>
         </div>
     </div>
