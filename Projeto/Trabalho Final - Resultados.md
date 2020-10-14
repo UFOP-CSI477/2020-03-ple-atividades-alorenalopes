@@ -27,10 +27,10 @@
 
 ### 3. Principais desafios e dificuldades
 
-    O principal desafio do trabalho foi o tempo para implementá-lo e a alta demanda do final do período. A maiorias dos erros ocorridos no desenvolvimento do trabalho foi muitas vezes por falta de atenção ou por não entender 100% determinado tópico. 
+ O principal desafio do trabalho foi o tempo para implementá-lo e a alta demanda do final do período. A maiorias dos erros ocorridos no desenvolvimento do trabalho foi muitas vezes por falta de atenção ou por não entender 100% determinado tópico. 
 
 
-### 5. Instruções para instalação e execução
+### 4. Instruções para instalação e execução
 
     1. Abrir o projeto.
     2. Na raiz do projeto digitar o comando:
