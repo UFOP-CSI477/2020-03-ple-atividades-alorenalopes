@@ -83,7 +83,6 @@ class PastaController extends Controller
      */
     public function destroy(Pasta $pasta)
     {   
-        dd($pasta->exame->count());
         if ($pasta->exame->count() > 0) {
             session()->flash('mensagem', 'Exclusão não permitida, existem exames associados!');
         } else {

@@ -14,9 +14,14 @@
         <div class="card-btn">
             <a href="{{route('listar', $d->nome)}}" class="card-link">Exibir</a>
             <a href="{{route('exames.create')}}" class="card-link">Adicionar</a>
-            @csrf
-            @method('DELETE')
-            <a class="card-link" href="{{route('pastas.destroy', $d->id)}}">Excluir</a>
+            <form name="frmDelete" action="{{route('pastas.destroy', $d->id)}}" 
+                method="post" onsubmit="return confirm('Confirma a exclusão do Exame?');">
+
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="Excluir">
+            </form>
         </div>
     </div>
     @endforeach

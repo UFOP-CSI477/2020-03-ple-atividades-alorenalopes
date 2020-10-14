@@ -124,3 +124,21 @@
     margin-left: 120px;
     margin-right: 120px; 
 }
+
+input{
+    height: 35px;
+    width: 170px;
+    background-color: #ec727c;
+    border: solid 2px #ec727c;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}

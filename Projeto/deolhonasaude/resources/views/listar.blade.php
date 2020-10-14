@@ -17,13 +17,13 @@
         <p class="card-descricao">{{$d->resultado}}</p>
         <p class="card-descricao">{{$d->observacoes}}</p>
         <div class="card-btn">
-            <form action="" name="frmDelete" action="{{route('exames.destroy', $d->id)}}" 
+            <form name="frmDelete" action="{{route('exames.destroy', $d->id)}}" 
                 method="post" onsubmit="return confirm('Confirma a exclusão do Exame?');">
 
                 @csrf
                 @method('DELETE')
 
-                <input type="submit" value="Excluir" class="btn btn-danger">
+                <input type="submit" value="Excluir">
             </form>
         </div>
     </div>
